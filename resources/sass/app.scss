@@ -1,0 +1,213 @@
+
+/*
+ * Globals
+ */
+
+ @media (min-width: 48em) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #555;
+  }
+  
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #333;
+  }
+
+  a {
+    color: #28a745;
+  }
+  
+  
+  /*
+   * Override Bootstrap's default container.
+   */
+  
+  .container {
+    max-width: 60rem;
+  }
+  
+  
+  /*
+   * Masthead for nav
+   */
+  
+  .blog-masthead {
+    background-color: #28a745;
+    -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+            box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+  }
+  
+  /* Nav links */
+  .nav-link {
+    position: relative;
+    padding: 1rem;
+    font-weight: 500;
+    color: #cdddeb;
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+  
+  /* Active state gets a caret at the bottom */
+  .nav-link.active {
+    color: #fff;
+  }
+  .nav-link.active:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -.3rem;
+    vertical-align: middle;
+    content: "";
+    border-right: .3rem solid transparent;
+    border-bottom: .3rem solid;
+    border-left: .3rem solid transparent;
+  }
+  
+  
+  /*
+   * Blog name and description
+   */
+  
+  .blog-header {
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+    border-bottom: .05rem solid #eee;
+  }
+  .blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    
+  }
+  .blog-description {
+    font-size: 1.1rem;
+    color: #999;
+  }
+  
+  @media (min-width: 40em) {
+    .blog-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  
+  /*
+   * Main column and sidebar layout
+   */
+  
+  /* Sidebar modules for boxing content */
+  .sidebar-module {
+    padding: 1rem;
+    /*margin: 0 -1rem 1rem;*/
+  }
+  .sidebar-module-inset {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: .25rem;
+  }
+  .sidebar-module-inset p:last-child,
+  .sidebar-module-inset ul:last-child,
+  .sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
+  
+  
+  /*
+   * Blog posts
+   */
+  
+  .blog-post {
+    margin-bottom: 4rem;
+  }
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+  
+  
+  /*
+   * Footer
+   */
+  
+  .blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+  }
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+
+
+
+   /* ==============   Footer CSS ============  */
+
+.bg-dark{background-color:#212529;}
+.footer-main{color:rgba(255,255,255,.4);}
+.footer-main a{color:rgba(255,255,255,.7);}
+
+/*  =========CSS for Mail Subscribe  ================*/
+
+.text-white-50{color:rgba(255,255,255,.5);}
+.input-group-append{display:flex;}
+.input-group-append .btn:focus{z-index:3;}
+.input-group-lg>.form-control:not(textarea){height:calc(1.5em + 1rem + 2px);}
+.input-group-lg>.form-control,.input-group-lg>.input-group-append>.btn{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.5rem;}
+.input-group>.input-group-append>.btn{border-top-left-radius:0;border-bottom-left-radius:0;}
+
+.mailchimp{background-color:#28a745;background-size:cover;background-image:url(https://startbootstrap.com/assets/img/overlay.svg),linear-gradient(45deg,#28a745 0%,#23923d 100%);color:#fff;padding:5rem 0; margin-bottom: 4rem;}
+.mailchimp #mc_embed_signup .input-group .form-control{font-size:1rem;}
+.mailchimp #mc_embed_signup .input-group-append .btn{font-size:.8rem;font-weight:600;}
+
+
+/*home page card CSS for post*/
+.btn-guide{color:#fff;background-color:#28a745;border-color:#28a745;}
+.btn-guide:hover{color:#fff;background-color:#218838;border-color:#1e7e34;}
+.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem;}
+.card{position:relative;display:flex;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.5rem;}
+.bg-guide{background-color:#28a745;}
+.shadow{box-shadow:0 .15rem 1.75rem 0 rgba(33,37,41,.15);}
+.guide-preview{overflow:hidden;}
+.guide-preview .guide-preview-category{min-width:10rem;max-width:15rem;}
+.guide-preview .guide-preview-category .small{font-size:.75rem;text-transform:uppercase;font-weight:700;}
+.guide-preview .guide-preview-title{font-size:1.25rem;margin-bottom:.25rem;font-weight:600;}
+
+
+
+/*pagination CSS*/
+
+.page-link {
+color: #28a745 !important;
+}
