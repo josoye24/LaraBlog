@@ -15,20 +15,7 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
-    public function addComment($body)  
-    {
-        $this->comments()->create(compact("body"));
-        
 
-
-        //add acomment to a post
-        // Comment::create([ 
-
-         // "body" => $body,
-          // "post_id" => $this->id
-
-         // ]);
-    }
 
     public function user() 
     {
@@ -60,8 +47,6 @@ class Post extends Model
     {
 
         return $this->belongsToMany(Tag::Class);
-        // Any post may have many tags
-        // Any tag mat be applied to amny posts
 
     }
 

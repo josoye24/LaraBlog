@@ -2,22 +2,28 @@
 
 @section("content")
 
+    <div class="col-sm-8 blog-main">
 
-        <div class="col-sm-8 blog-main">
+        @if ($flash = session("addPost"))
+
+        <div class="alert alert-success" role="alert">
+          {{ $flash }}
+        </div>
+  
+        @endif
+
 
         @foreach($posts as $post)
-
-        @include("posts.posts")
-          
+    
+            @include("posts.posts")
+    
         @endforeach
-        
+
         @if (request()->is('/'))
             {{$posts->links()}}    
         @endif
-    
-        
-         
-        </div>
+
+    </div>
 
 @endsection
         

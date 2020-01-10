@@ -18,7 +18,7 @@
         <div class="p mb-4"> 
           {{ str_limit ($post->body, 130) }}   
         </div>
-        <a href="/posts/{{$post->title }}" class="btn btn-sm btn-guide">Learn More →</a>
+        <a href="/posts/{{$post->title }}" class="btn btn-sm btn-guide">Read More →</a>
       </div>
     </div>
   </div>

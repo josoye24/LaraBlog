@@ -5,20 +5,19 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Tag;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class PostController extends Controller
 {
-
     public function __construct() 
     {
-
         $this->middleware("auth")->except(["index", "show"]);
 
     }
 
-    public function index(Post $post)
+    public function index(Post $posts)
     {
 
         $posts = Post::latest()
@@ -46,20 +45,37 @@ class PostController extends Controller
     }
 
    
-    public function store(){
+    public function store(Request $request) {
         $this->validate(request(),[
             "title" => "required",
-            "body" => "required"
+            "body" => "required",
+            "tags" => ""
         ]);
 
 
      auth()->user()->publish(
-            new Post(request(["title", "body"]))
-        );
+         $post = new Post(request(["title", "body"]))
+        );        
+
+        $input = $request->input("tags");
+
+        if (DB::table('tags')->where('name', $input)->exists())
+        {
+            $tag = DB::table('tags')->where('name', $input)->value('id');
+        } else {
         
-        return redirect()->home();
+        $tagID = Tag::create([ 
+            "name" => $input,
+            ]);
+        $tag = $tagID->id;
+
+        }
+
+        DB::table('post_tag')->insert(
+                ['post_id' => $post->id, 
+                'tag_id' => $tag]
+            );
+    
+        return redirect()->home()->with('addPost', 'New Post sucessfully created');
     }
-
-
-
 }
