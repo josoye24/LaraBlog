@@ -64,10 +64,10 @@ class PostController extends Controller
             $tag = DB::table('tags')->where('name', $input)->value('id');
         } else {
         
-        $tagID = Tag::create([ 
+        $Newtag = Tag::create([ 
             "name" => $input,
             ]);
-        $tag = $tagID->id;
+        $tag = $Newtag->id;
 
         }
 

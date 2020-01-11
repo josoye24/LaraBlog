@@ -11,9 +11,9 @@
   </div>
  
   <div class="sidebar-module">
-    <h4>Archives</h4>
+    <h4 class="mt-3">Archives</h4>
       <ol class="list-unstyled">
-
+        
         @foreach ($archieves as $archieve)
           <li>
             <a href="/?month={{ $archieve["month"] }}&year={{ $archieve["year"] }}">
@@ -29,7 +29,7 @@
       <h4>Tags</h4>
         <ol class="list-unstyled">
           
-          @foreach ($tags as $tag )
+          @foreach ($tags->slice(0, 10) as $tag )
           <li>
             <a href="/posts/tags/{{ $tag }}">
               {{ $tag }}

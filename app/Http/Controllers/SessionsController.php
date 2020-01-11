@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 
 class SessionsController extends Controller
@@ -44,10 +45,11 @@ class SessionsController extends Controller
 
 
     
-    public function destroy ()
+    public function destroy (Request $request)
     {
 
-        auth()->logout();
+        Auth::logout();
+
 
         return redirect()->home();
         

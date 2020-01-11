@@ -25,7 +25,7 @@ class RegistrationController  extends Controller
 
         $form->persist();
 
-        session()->flash("message", "Thanks for signing up");
+        session()->flash("addPost", "Thanks for signing up");
 
         return redirect()->home();
     }
