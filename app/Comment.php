@@ -1,6 +1,8 @@
 <?php
 
 namespace App;
+use App\Post;
+use App\User;
 
 
 class Comment extends Model

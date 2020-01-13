@@ -4,8 +4,9 @@
       @foreach ($recentPost as $post)
         <li>
           <a href="/posts/{{$post->title }}">
-            {{$post->title }}</a>   
+            {{ str_limit($post->title, 30) }}</a>   
         </li>
+        <hr>
       @endforeach
   
   </div>

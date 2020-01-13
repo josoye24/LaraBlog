@@ -3,6 +3,9 @@
 namespace App;
 use Carbon\Carbon;
 use App\Post;
+use App\Comment;
+use App\User;
+use App\Tag;
 
 
 

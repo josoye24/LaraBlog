@@ -2,6 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
+use App\Post;
+use App\Comment;
+use App\Tag;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -25,3 +29,32 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+
+$factory->define(Post::class, function (Faker $faker) {
+    return [
+        'title' => $faker->catchPhrase .' '.$faker->bs,
+        'body' => $faker->realText(350),
+        'created_at' => now(),
+        'user_id' => User::select('id')->orderByRaw("RAND()")->first()->id,
+    ];
+});
+
+
+$factory->define(Comment::class, function (Faker $faker) {
+    return [
+        'body' => $faker->sentence(5),
+        'created_at' => now(),
+        'user_id' => User::select('id')->orderByRaw("RAND()")->first()->id,
+        'post_id' => Post::select('id')->orderByRaw("RAND()")->first()->id,
+    ];
+});
+
+
+$factory->define(Tag::class, function (Faker $faker) {
+    return [
+        'name' => $faker->unique()->sentence(1),
+    ];
+});
+
+
