@@ -4,8 +4,19 @@
 
 <div class="col-sm-8 blog-main">
 
+    @if ($flash = session("message"))
+
+    <div class="alert alert-danger" role="alert">
+      {{ $flash }}
+    </div>
+
+    @endif
+
+
     <h1>Registration</h1>
-      
+
+
+
     <form method="POST" action="register">
         @csrf
 

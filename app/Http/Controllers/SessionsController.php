@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
 
+
 class SessionsController extends Controller
 {
     
@@ -38,8 +39,8 @@ class SessionsController extends Controller
             ]);
         }
 
-        //if sign in redirecto to home
-        return redirect()->home(); 
+        //if sign is sucessfyll redirecto to home
+        return redirect()->home()->with('message', 'Login Successful');
 
     }
 

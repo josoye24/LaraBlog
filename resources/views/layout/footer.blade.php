@@ -1,4 +1,4 @@
-<div class="mailchimp mt-5">
+<div id="contact" class="mailchimp mt-5">
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col-xl-7 col-lg-8">

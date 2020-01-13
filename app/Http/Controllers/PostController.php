@@ -76,6 +76,6 @@ class PostController extends Controller
                 'tag_id' => $tag]
             );
     
-        return redirect()->home()->with('addPost', 'New Post sucessfully created');
+        return redirect()->home()->with('message', 'New Post Added Successfully');
     }
 }

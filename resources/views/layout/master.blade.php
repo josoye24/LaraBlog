@@ -25,10 +25,9 @@
 <div class="mailchimp">
   <div class="container">
     <h1 class="blog-title mb-3" style="color:#FFF">LaraBlog</h1>
-    <p>Made with ❤️ Laravel</p>
+    <p>Made with ❤️ + Laravel</p>
   </div>
 </div>
-<style></style>
             
 
 <div class="container">

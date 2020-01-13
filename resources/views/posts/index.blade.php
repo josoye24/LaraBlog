@@ -4,7 +4,7 @@
 
     <div class="col-sm-8 blog-main">
 
-        @if ($flash = session("addPost"))
+        @if ($flash = session("message"))
 
         <div class="alert alert-success" role="alert">
           {{ $flash }}

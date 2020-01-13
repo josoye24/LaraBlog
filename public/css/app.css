@@ -311,3 +311,35 @@ a {
   color: #28a745 !important;
 }
 
+/* CSS for Nar Menu*/
+  .topnav-right {
+    float: right;
+  }
+
+  body {margin:0;font-family:Arial}
+  
+  .topnav {
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color: #016641;
+    color: white;
+  }
+  
+  .topnav a:hover {
+    background-color: #41a681;
+    color: white;
+  }
+
+

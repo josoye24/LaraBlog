@@ -4,8 +4,7 @@ namespace App\Http\Requests;
 
 use App\User;
 use App\Mail\WelcomeAgain;
-
-
+use Illuminate\Http\Request;
 
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -41,13 +40,11 @@ class RegistrationRequest extends FormRequest
 
     public function persist()
     {
-
+        
         $user = User::create(
             $this->only(['name', 'email', 'password']));
         
         auth()->login($user);
-        
-
 
     }
 
