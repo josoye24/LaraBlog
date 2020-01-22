@@ -1,23 +1,31 @@
 ## Installation Instructions
+A simple blog for demonstration purpose. Based on Laravel 5.8
 
-1. Run git clone https://github.com/josoye24/LaraBlog.git
-2. Create a MySQL database for the project
-3. Configure your .env file
-4. Run composer install from the projects root folder
-5. Fom the projects root folder run php artisan key:generate
-6. From the projects root folder run php artisan migrate
-7. From the projects root folder run composer dump-autoload
-8. From the projects root folder run php artisan migrate:fresh --seed
-9. From the projects root folder run php artisan serve
+## Demo
+You can try the live demo : https://larablog.ziontech.com.ng/
+
+## Demo login info
+
+user: user@example.com | password: password
 
 
-## Contributing
+## Installation Instructions
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+1. git clone https://github.com/milon/laravel-blog.git
+2. composer install
+3. Configure database setting in .env file
+4. php artisan key:generate
+5. php artisan migrate
+6. php artisan db:seed
+7. php artisan serve
+```
 
-## Security Vulnerabilities
+## Author
+ - [Joseph](https://twitter.com/josoye24).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Feel free to contact me on Twitter, if you have any question.
+
 
 ## License
 
