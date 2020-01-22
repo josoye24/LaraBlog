@@ -41,7 +41,7 @@
 
         <div class="card">
             <div class="card-block">
-            <form method="POST" action="/posts/{{$post->title}}/comments">
+            <form method="POST" action="/posts/{{$post->slug}}/comments">
             @csrf 
                 <div class="form-group">
                     <textarea name="body" placeholder="Your comment here." class="form-control" required></textarea>

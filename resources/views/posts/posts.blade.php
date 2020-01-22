@@ -13,12 +13,12 @@
     </div>
       <div class="p-4 d-flex align-items-center w-100">
       <div class="w-100">
-        <a href="/posts/{{$post->title }}" class="d-block text-guide guide-preview-title">
+        <a href="/posts/{{$post->slug }}" class="d-block text-guide guide-preview-title">
           {{$post->title }}</a>    
         <div class="p mb-4"> 
           {{ str_limit ($post->body, 130) }}   
         </div>
-        <a href="/posts/{{$post->title }}" class="btn btn-sm btn-guide">Read More →</a>
+        <a href="/posts/{{ $post->slug }}" class="btn btn-sm btn-guide">Read More →</a>
       </div>
     </div>
   </div>

@@ -16,8 +16,8 @@
 Route::get("/", "PostController@index")->name("home");
 Route::get("posts/create", "PostController@create");
 Route::post("posts/create", "PostController@store");
-Route::get("/posts/{post}", "PostController@show");
-Route::post("/posts/{post}/comments", "CommentsController@store");
+Route::get("/posts/{slug}", "PostController@show");
+Route::post("/posts/{slug}/comments", "CommentsController@store");
 Route::get("/posts/tags/{tag}", "TagsController@index");
 
 

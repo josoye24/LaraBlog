@@ -25,16 +25,19 @@ $factory->define(User::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => '$2y$10$fwcDpKOLQoJTYnPK/q5RVO9Nluec1ol0LwS7N2xTjIF5wLKDuW02u', // password
         'remember_token' => Str::random(10),
     ];
 });
 
 
 $factory->define(Post::class, function (Faker $faker) {
+    $title = $faker->catchPhrase .' '.$faker->bs;
+    $slug = Str::slug($title, '-');
     return [
-        'title' => $faker->catchPhrase .' '.$faker->bs,
+        'title' => $title,
         'body' => $faker->realText(350),
+        'slug' => $slug,
         'created_at' => now(),
         'user_id' => User::select('id')->orderByRaw("RAND()")->first()->id,
     ];

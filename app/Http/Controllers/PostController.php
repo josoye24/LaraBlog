@@ -7,6 +7,7 @@ use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 
 class PostController extends Controller
@@ -31,9 +32,9 @@ class PostController extends Controller
     }
     
 
-    public function show(Post $post)
+    public function show(Post $slug)
     {
-
+        $post = $slug;
         return view("posts.show", compact("post"));
 
     }
@@ -52,10 +53,16 @@ class PostController extends Controller
             "tags" => ""
         ]);
 
+        $slug = Str::slug($request->title, '-');
 
-     auth()->user()->publish(
-         $post = new Post(request(["title", "body"]))
-        );        
+        
+
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
+        $post->slug = $slug;
+        $post->save();
 
         $input = $request->input("tags");
 

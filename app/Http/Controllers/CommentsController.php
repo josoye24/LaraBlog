@@ -15,13 +15,13 @@ class CommentsController extends Controller
 
     }
 
-    public function store(Post $post, Request $request) {
+    public function store(Post $slug, Request $request) {
               
         $this->validate(request(), ["body" => "required|min:2" ]);
         
          $tt = Comment::create([ 
             "body" => $request->input("body"),
-            "post_id" => $post->id,
+            "post_id" => $slug->id,
             "user_id" => auth()->user()->id
             ]);
 

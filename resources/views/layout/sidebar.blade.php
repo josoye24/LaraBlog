@@ -3,7 +3,7 @@
     <h4>Recent Post</h4>
       @foreach ($recentPost as $post)
         <li>
-          <a href="/posts/{{$post->title }}">
+          <a href="/posts/{{$post->slug }}">
             {{ str_limit($post->title, 30) }}</a>   
         </li>
         <hr>
