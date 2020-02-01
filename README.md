@@ -14,7 +14,7 @@ user: user@example.com | password: password
 ## Installation Instructions
 
 ```
-1. git clone https://github.com/milon/laravel-blog.git
+1. git clone https://github.com/josoye24/LaraBlog.git
 2. composer install
 3. Set the database connection in .env file
 4. php artisan key:generate
